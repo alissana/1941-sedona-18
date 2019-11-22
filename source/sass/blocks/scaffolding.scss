@@ -1,0 +1,26 @@
+body {
+  background-color: #ffffff;
+  font-family: "PT Sans", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.button {
+  background-color: #81b3d2;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: bold;
+  padding: 17px 47px 19px 47px;
+  text-decoration: none;
+}
