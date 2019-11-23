@@ -1,0 +1,45 @@
+.advantages-item {
+  background-color: $color-grey-blue;
+  position: relative;
+  text-align: center;
+}
+
+.advantages-item__wrapper {
+  padding: 33px 27px 33px 28px;
+}
+
+.advantages-item__wrapper--grey {
+  background-color: #eeeeee;
+}
+
+.advantages-item__wrapper::before {
+  content: "";
+  background-image: url("../img/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.advantages-item__title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.advantages-item__title--black {
+  color: #000000;
+}
+
+.advantages-item__text {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+}
+
+.advantages-item__text--grey {
+  color: #333333;
+}
