@@ -1,4 +1,5 @@
 .features-list {
+  @include no-list;
   background-color: #ffffff;
   padding: 40px 41px 40px 69px;
   text-align: left;

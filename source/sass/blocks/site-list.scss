@@ -1,5 +1,6 @@
 .site-list {
-  background-color: $color-grey-blue;
+  @include no-list;
+  background-color: $primary-color;
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
@@ -9,8 +10,8 @@
 }
 
 .site-list__item {
-  box-shadow: 0 1px 0 0 $black-shadow,
-    inset 0 1px 0 0 $white-shadow;
+  box-shadow: 0 1px 0 0 $dark-shadow,
+    inset 0 1px 0 0 $light-shadow;
 }
 
 .site-list__link {
