@@ -1,0 +1,69 @@
+.choice-list {
+  @include no-list;
+  text-align: left;
+}
+
+.choice-list__item {
+  margin-bottom: 58px;
+  margin-left: 80px;
+
+  &:last-child {
+    margin-bottom: 25px;
+  }
+}
+
+.choice-list__label {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  position: relative;
+  text-align: left;
+  text-transform: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.choice-list__label--radio::before {
+  content: "";
+  background-color:#f2f2f2;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  left: -80px;
+  top: -12px;
+}
+
+.choice-list__radio:checked + .choice-list__label--radio::before {
+  background-color: #333333;
+  border-radius: 50%;
+  border: 15px solid #f2f2f2;
+  position: absolute;
+  left: -80px;
+  top: -12px;
+  width: 16px;
+  height: 16px;
+}
+
+.choice-list__label--checkbox::before {
+  content: "";
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  position: absolute;
+  left: -80px;
+  top: -12px;
+  width: 56px;
+  height: 56px;
+}
+
+.choice-list__checkbox:checked + .choice-list__label--checkbox::before {
+  background-image: url("../img/icon-tick.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 24px 16px;
+  height: 56px;
+  width: 56px;
+}
+
+
