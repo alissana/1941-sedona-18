@@ -1,0 +1,51 @@
+.promo-video-content__wrapper {
+  margin: 0 auto;
+  padding: 0 20px 10px 20px;
+  text-align: center;
+}
+
+.promo-video-content__title {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+
+.promo-video-content__description {
+  color: #333333;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+}
+
+.promo-video-content__video {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-video-content__wrapper {
+    padding: 0 20px 10px 20px;
+    max-width: 490px;
+  }
+
+  .promo-video-content__title {
+    font-size: 30px;
+  }
+
+  .promo-video-content__video {
+    margin: 0 auto;
+    padding: 0 60px;
+    max-width: 648px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-video-content__video {
+    margin: 0 auto;
+    padding: 0 200px;
+    max-width: 800px;
+  }
+}

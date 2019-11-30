@@ -1,5 +1,23 @@
 .page-header {
-  margin: auto;
-  text-align: center;
-  width: 320px;
+  display: flex;
+}
+
+.page-header__logo {
+  height: 83px;
+}
+
+.page-header__logo-image {
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo {
+    height: 96px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    height: 83px;
+  }
 }

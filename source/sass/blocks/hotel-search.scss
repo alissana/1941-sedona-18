@@ -1,9 +1,11 @@
 .hotel-search {
+  margin: 0 auto;
   text-align: center;
 }
 
 .hotel-search__wrapper {
-  padding: 33px 20px 40px 20px;
+  margin: 57px 0 40px 0;
+  padding: 0 20px;
 }
 
 .hotel-search__title {
@@ -19,6 +21,7 @@
   font-weight: normal;
   line-height: 24px;
   margin-bottom: 40px;
+  padding: 0 12px;
 }
 
 .hotel-search__button {
@@ -29,4 +32,18 @@
   border: none;
   height: 350px;
   width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .hotel-search__wrapper {
+    margin: 0 auto;
+    margin-top: 57px;
+    margin-bottom: 40px;
+    max-width: 458px;
+  }
+
+  .hotel-search__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
 }
