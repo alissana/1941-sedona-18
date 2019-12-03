@@ -1,7 +1,5 @@
 .site-list {
   @include no-list;
-  display: flex;
-  flex-direction: column;
   background-color: $primary-color;
   font-size: 18px;
   font-weight: bold;
@@ -27,21 +25,19 @@
 
 @media (min-width: $tablet-width) {
   .site-list {
+    display: flex;
     align-items: center;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     background-color: $subject-color;
     border: none;
     font-size: 14px;
     line-height: 26px;
     min-height: 56px;
-    min-width: 768px;
   }
 
   .site-list__item {
     box-shadow: none;
-    margin: 0 auto;
+    width: 153px;
 
     &--logo {
       background-color: $subject-color;
@@ -56,8 +52,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .site-list {
-    min-height: 56px;
-    min-width: 1200px;
+  .site-list__item {
+    width: 239px;
   }
 }

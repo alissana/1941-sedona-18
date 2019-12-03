@@ -27,8 +27,7 @@
 
 @media (min-width: $tablet-width) {
   .promo-video-content__wrapper {
-    padding: 0 20px 10px 20px;
-    max-width: 490px;
+    padding: 51px 177px 78px 176px;
   }
 
   .promo-video-content__title {
@@ -38,14 +37,18 @@
   .promo-video-content__video {
     margin: 0 auto;
     padding: 0 60px;
-    max-width: 648px;
+    width: 648px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .promo-video-content__wrapper {
+    padding: 51px 393px 76px 392px;
+  }
+
   .promo-video-content__video {
     margin: 0 auto;
     padding: 0 200px;
-    max-width: 800px;
+    width: 800px;
   }
 }

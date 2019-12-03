@@ -4,8 +4,7 @@
 }
 
 .hotel-search__wrapper {
-  margin: 57px 0 40px 0;
-  padding: 0 20px;
+  padding: 57px 20px 40px 20px;
 }
 
 .hotel-search__title {
@@ -37,9 +36,9 @@
 @media (min-width: $tablet-width) {
   .hotel-search__wrapper {
     margin: 0 auto;
-    margin-top: 57px;
-    margin-bottom: 40px;
-    max-width: 458px;
+    padding-top: 32px;
+    padding-bottom: 66px;
+    width: 458px;
   }
 
   .hotel-search__title {

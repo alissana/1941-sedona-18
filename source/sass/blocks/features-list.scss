@@ -1,23 +1,28 @@
 .features-list {
   @include no-list;
   background-color: $subject-color;
-  padding: 40px 70px;
   text-align: left;
 }
 
 .features-list__item {
+  margin: 0;
+  padding: 40px 40px 0 70px;
   position: relative;
+
+  &:last-child {
+    padding-bottom: 40px;
+  }
 
   &--house::before {
     content: "";
     background-image: url("../img/icon-house.svg");
     background-repeat: no-repeat;
     background-size: 36px 37px;
-    height: 36px;
     width: 37px;
+    height: 36px;
     position: absolute;
-    top: -10px;
-    left: -45px;
+    top: 30px;
+    left: 20px;
   }
 
   &--food::before {
@@ -25,11 +30,11 @@
     background-image: url("../img/icon-burger.svg");
     background-repeat: no-repeat;
     background-size: 40px 35px;
-    height: 35px;
     width: 40px;
+    height: 35px;
     position: absolute;
-    top: -10px;
-    left: -45px;
+    top: 30px;
+    left: 20px;
   }
 
   &--souvenirs::before {
@@ -37,11 +42,11 @@
     background-image: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
     background-size: 32px 38px;
-    height: 38px;
     width: 32px;
+    height: 38px;
     position: absolute;
-    top: -10px;
-    left: -45px;
+    top: 30px;
+    left: 20px;
   }
 }
 
@@ -64,24 +69,23 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 164px 57px 85px 57px;
   }
 
   .features-list__item {
-    flex-wrap: wrap;
-    max-width: 163px;
+    box-sizing: border-box;
+    padding: 164px 46px 66px 47px;
     text-align: center;
-    position: relative;
+    width: 256px;
 
     &--house::before {
       content: "";
       background-image: url("../img/icon-house.svg");
       background-repeat: no-repeat;
       background-size: 75px 72px;
-      height: 72px;
       width: 75px;
+      height: 72px;
       position: absolute;
-      top: -32px;
+      top: 132px;
       left: 50%;
       transform: translate(-50%, -100%);
     }
@@ -90,11 +94,11 @@
       content: "";
       background-image: url("../img/icon-burger.svg");
       background-repeat: no-repeat;
-      background-size: 68px 77px;
-      height: 77px;
-      width: 68px;
+      background-size: 77px 68px;
+      width: 77px;
+      height: 68px;
       position: absolute;
-      top: -32px;
+      top: 132px;
       left: 50%;
       transform: translate(-50%, -100%);
     }
@@ -104,10 +108,10 @@
       background-image: url("../img/icon-gift.svg");
       background-repeat: no-repeat;
       background-size: 64px 75px;
-      height: 75px;
       width: 64px;
+      height: 75px;
       position: absolute;
-      top: -32px;
+      top: 132px;
       left: 50%;
       transform: translate(-50%, -100%);
     }
@@ -115,20 +119,14 @@
 }
 
 @media (min-width: $desktop-width) {
-  .features-list {
-    padding: 164px 57px 85px 57px;
-  }
-
   .features-list__item {
-    max-width: 400px;
+    box-sizing: border-box;
+    padding: 164px 73px 68px 73px;
+    width: 400px;
   }
 
   .features-list__title {
     font-size: 21px;
     line-height: 26px;
-  }
-
-  .features-list__description {
-    max-width: 283px;
   }
 }

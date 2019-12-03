@@ -3,21 +3,43 @@
 }
 
 .page-header__logo {
+  position: absolute;
+  left: 50%;
+  bottom: -27px;
+  transform: translate(-50%, 0);
+  width: 102px;
   height: 83px;
+  z-index: 2;
 }
 
 .page-header__logo-image {
   margin: 0 auto;
 }
 
+.page-header__wrapper {
+  background-color: #ffffff;
+  height: 56px;
+}
+
 @media (min-width: $tablet-width) {
+  .page-header__wrapper {
+    height: 0;
+  }
+
   .page-header__logo {
-    height: 96px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: 102px;
+    height: 83px;
+    z-index: 2;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header__logo {
-    height: 83px;
+    width: 188px;
+    height: 96px;
   }
 }

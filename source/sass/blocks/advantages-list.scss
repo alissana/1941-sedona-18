@@ -1,6 +1,7 @@
 .advantages-list {
   @include no-list;
   background-color: #eeeeee;
+  box-sizing: border-box;
   position: relative;
 }
 
@@ -9,12 +10,5 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 768px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .advantages-list {
-    width: 1200px;
   }
 }
