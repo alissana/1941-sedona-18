@@ -1,20 +1,132 @@
 .features-list {
   @include no-list;
-  background-color: #ffffff;
-  padding: 40px 41px 40px 69px;
+  background-color: $subject-color;
   text-align: left;
 }
 
+.features-list__item {
+  margin: 0;
+  padding: 40px 40px 0 70px;
+  position: relative;
+
+  &:last-child {
+    padding-bottom: 40px;
+  }
+
+  &--house::before {
+    content: "";
+    background-image: url("../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-size: 36px 37px;
+    width: 37px;
+    height: 36px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+  }
+
+  &--food::before {
+    content: "";
+    background-image: url("../img/icon-burger.svg");
+    background-repeat: no-repeat;
+    background-size: 40px 35px;
+    width: 40px;
+    height: 35px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+  }
+
+  &--souvenirs::before {
+    content: "";
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-size: 32px 38px;
+    width: 32px;
+    height: 38px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+  }
+}
+
 .features-list__title {
-  color: #000000;
+  color: $title-color;
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
 }
 
 .features-list__description {
-  color: #333333;
+  color: $text-color;
   font-size: 14px;
   font-weight: normal;
   line-height: 21px;
+}
+
+@media (min-width: $tablet-width) {
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .features-list__item {
+    box-sizing: border-box;
+    padding: 164px 46px 66px 47px;
+    text-align: center;
+    width: 256px;
+
+    &--house::before {
+      content: "";
+      background-image: url("../img/icon-house.svg");
+      background-repeat: no-repeat;
+      background-size: 75px 72px;
+      width: 75px;
+      height: 72px;
+      position: absolute;
+      top: 132px;
+      left: 50%;
+      transform: translate(-50%, -100%);
+    }
+
+    &--food::before {
+      content: "";
+      background-image: url("../img/icon-burger.svg");
+      background-repeat: no-repeat;
+      background-size: 77px 68px;
+      width: 77px;
+      height: 68px;
+      position: absolute;
+      top: 132px;
+      left: 50%;
+      transform: translate(-50%, -100%);
+    }
+
+    &--souvenirs::before {
+      content: "";
+      background-image: url("../img/icon-gift.svg");
+      background-repeat: no-repeat;
+      background-size: 64px 75px;
+      width: 64px;
+      height: 75px;
+      position: absolute;
+      top: 132px;
+      left: 50%;
+      transform: translate(-50%, -100%);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features-list__item {
+    box-sizing: border-box;
+    padding: 164px 73px 68px 73px;
+    width: 400px;
+  }
+
+  .features-list__title {
+    font-size: 21px;
+    line-height: 26px;
+  }
 }

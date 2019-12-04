@@ -1,10 +1,10 @@
-.page-content__wrapper {
+.page-photo-content__wrapper {
   margin: 0 auto;
-  padding: 43px 33px 29px 32px;
+  padding: 44px 24px 33px 27px;
   text-align: center;
 }
 
-.page-content__title {
+.page-photo-content__title {
   color: #000000;
   font-size: 18px;
   font-weight: bold;
@@ -12,21 +12,21 @@
   margin-bottom: 20px;
 }
 
-.page-content__description {
+.page-photo-content__description {
   color: #333333;
   font-size: 14px;
   font-weight: normal;
-  line-height: 26px;
+  line-height: 24px;
   margin: 0;
 }
 
 @media (min-width: $tablet-width) {
-  .page-content__wrapper {
-    padding: 51px 139px 55px 139px;
+  .page-photo-content__wrapper {
+    padding: 76px 170px 75px 170px;
   }
 
-  .page-content__title {
-    font-size: 21px;
+  .page-photo-content__title {
+    font-size: 30px;
     line-height: 26px;
     margin: 0;
     margin-bottom: 28px;
@@ -34,7 +34,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .page-content__wrapper {
-    padding: 51px 355px 50px 355px;
+  .page-photo-content__wrapper {
+    padding: 113px 386px 77px 386px;
   }
 }

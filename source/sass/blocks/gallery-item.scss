@@ -4,10 +4,15 @@
   margin: 0;
   padding: 22px 20px 23px 20px;
   text-align: left;
+  width: 280px;
 }
 
 .gallery-item__signature {
   font-weight: bold;
+}
+
+.gallery-item__caption {
+  padding-top: 20px;
 }
 
 .gallery-item__photographer {
@@ -18,4 +23,35 @@
 
 .gallery-item__like {
   font-weight: bold;
+}
+
+@media (min-width: $tablet-width) {
+  .gallery-item {
+    padding: 0;
+    width: 324px;
+  }
+
+  .gallery-item--big-size {
+    width: 100%;
+  }
+
+  .gallery-item__caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gallery-item {
+    padding: 0;
+    width: 400px;
+  }
+
+  .gallery-item--big-size {
+    width: 100%;
+  }
 }

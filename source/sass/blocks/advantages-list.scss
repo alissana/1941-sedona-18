@@ -1,4 +1,14 @@
 .advantages-list {
   @include no-list;
+  background-color: #eeeeee;
+  box-sizing: border-box;
   position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
