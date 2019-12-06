@@ -58,7 +58,7 @@
   height: 16px;
 }
 
-.checkbox-list__input:checked + .form-list__label--checkbox::before {
+.form-list__checkbox:checked + .form-list__label--checkbox::before {
   background-image: url("../img/icon-tick.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;

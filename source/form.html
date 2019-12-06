@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Седона. Ваши впечатления</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
@@ -50,99 +51,84 @@
             <img class="main-banner__description-image" src="img/text-sedona.svg" width="229" height="39" alt="Седона">
           </div>
         </div>
-        <section class="review review-content review-content__wrapper">
-          <h2 class="review-content__title">Оставьте свой отзыв</h2>
-          <p class="review-content__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-          <form class="review-content__form review-form" action="http://echo.htmlacademy.ru" method="POST">
-            <div class="review-form__block form-block">
-              <fieldset class="form-block__fieldset">
-                <legend class="form-block__legend">Представьтесь:</legend>
-                <div class="form-block__wrapper form-block__wrapper">
-                  <label class="form-block__label" for="form-name">Имя<sup>*</sup>:</label>
-                  <div class="form-block__field">
-                    <input class="form-block__input" type="text" name="your-name" id="form-name" placeholder="Петр" required>
-                  </div>
-                </div>
-                <div class="form-block__wrapper form-block__wrapper">
-                  <label class="form-block__label" for="form-surname">Фамилия<sup>*</sup>:</label>
-                  <div class="form-block__field">
-                    <input class="form-block__input" type="text" name="your-surname" id="form-surname" placeholder="Иванов" required>
-                  </div>
-                </div>
-                <div class="form-block__wrapper form-block__wrapper">
-                  <label class="form-block__label" for="form-patronymic">Отчество:</label>
-                  <div class="form-block__field">
-                    <input class="form-block__input" type="text" name="your-patronymic" id="form-patronymic" placeholder="Александрович">
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-            <div class="review-form__block form-block">
-              <fieldset class="form-block__fieldset">
-                <legend class="form-block__legend">Контактная информация:</legend>
-                <div class="form-block__wrapper--column">
-                  <label class="form-block__label form-block__label--padding" for="form-phone">Контактный телефон<sup>*</sup>:</label>
-                  <div class="form-block__field">
-                    <input class="form-block__input form-block__input--tel" type="tel" name="your-phone" id="form-phone" pattern="[7-8]{1}[0-9]{10}" placeholder="Введите телефон" required>
-                  </div>
-                </div>
-                <div class="form-block__wrapper--column">
-                  <label class="form-block__label form-block__label--padding" for="form-email">Электронная почта<sup>*</sup>:</label>
-                  <div class="form-block__field">
-                    <input class="form-block__input" type="email" name="your-email" id="form-email" placeholder="Введите e-mail" required>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-            <div class="review-form__block form-block">
-                <fieldset class="form-block__fieldset">
-                  <legend class="form-block__legend">Ваше общее впечатление:</legend>
-                  <ul class="form-block__list choice-list">
-                    <li class="choice-list__item">
-                      <input class="choice-list__radio visually-hidden" type="radio" name="your-impression" id="impression-positive" value="positive" checked>
-                      <label class="choice-list__label choice-list__label--radio" for="impression-positive">Скорее положительное</label>
-                    </li>
-                    <li class="choice-list__item">
-                      <input class="choice-list__radio visually-hidden" type="radio" name="your-impression" id="impression-negative" value="negative">
-                      <label class="choice-list__label choice-list__label--radio" for="impression-negative">Скорее отрицательное</label>
-                    </li>
-                    <li class="choice-list__item">
-                      <input class="choice-list__radio visually-hidden" type="radio" name="your-impression" id="impression-nodecide" value="nodecide">
-                      <label class="choice-list__label choice-list__label--radio" for="impression-nodecide">Затрудняюсь ответить</label>
-                    </li>
-                  </ul>
-                </fieldset>
-            </div>
-            <div class="review-form__block form-block">
-                <fieldset class="form-block__fieldset">
-                  <legend class="form-block__legend">Посещенные достопримечательности:</legend>
-                  <ul class="form-block__list choice-list">
-                    <li class="choice-list__item">
-                      <input class="choice-list__checkbox visually-hidden" type="checkbox" name="attraction-bridge" id="attractions-bridge" checked>
-                      <label class="choice-list__label choice-list__label--checkbox" for="attractions-bridge">Мост Дьявола</label>
-                    </li>
-                    <li class="choice-list__item">
-                      <input class="choice-list__checkbox visually-hidden" type="checkbox" name="attraction-mountain-bell" id="attractions-mountain-bell" checked>
-                      <label class="choice-list__label choice-list__label--checkbox" for="attractions-mountain-bell">Гора-Колокол</label>
-                    </li>
-                    <li class="choice-list__item">
-                      <input class="choice-list__checkbox visually-hidden" type="checkbox" name="attraction-slide-park" id="attractions-slide-park" checked>
-                      <label class="choice-list__label choice-list__label--checkbox" for="attractions-slide-park">Слайд-парк</label>
-                    </li>
-                    <li class="choice-list__item">
-                      <input class="choice-list__checkbox visually-hidden" type="checkbox" name="attraction-red-rocks" id="attractions-red-rocks">
-                      <label class="choice-list__label choice-list__label--checkbox" for="attractions-red-rocks">Красные скалы</label>
-                    </li>
-                  </ul>
-                </fieldset>
-            </div>
-            <div class="review-form__block form-block">
-              <div class="form-block__legend">Опишите свои эмоции:</div>
+        <section class="review review-content">
+          <div class="review-content__wrapper">
+            <h2 class="review-content__title">Оставьте свой отзыв</h2>
+            <p class="review-content__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          </div>
+
+          <form class="review-content__form form" action="http://echo.htmlacademy.ru" method="post">
+            <div class="form__block form-block form-block--user">
+              <legend class="form-block__legend">Представьтесь:</legend>
               <div class="form-block__wrapper">
-                <textarea class="form-block__textarea" name="your-review" id="review-comment" placeholder="Опишите подробно все свои восторги" rows="5"></textarea>
+                <label class="form-block__label" for="form-name">Имя<sup>*</sup>:</label>
+                <input class="form-block__input" type="text" name="your-name" id="form-name" placeholder="Петр" required>
+              </div>
+              <div class="form-block__wrapper">
+                <label class="form-block__label" for="form-surname">Фамилия<sup>*</sup>:</label>
+                <input class="form-block__input" type="text" name="your-surname" id="form-surname" placeholder="Иванов" required>
+              </div>
+              <div class="form-block__wrapper">
+                <label class="form-block__label" for="form-patronymic">Отчество:</label>
+                <input class="form-block__input" type="text" name="your-patronymic" id="form-patronymic" placeholder="Александрович">
               </div>
             </div>
-            <div class="review-form__block form-block">
+            <div class="form__block form-block form-block--contacts">
+              <legend class="form-block__legend form-block__legend--contacts">Контактная информация:</legend>
+              <div class="form-block__column-wrapper">
+                <div class="form-block__wrapper form-block__wrapper--column">
+                  <label class="form-block__label form-block__label--contacts form-block__label--padding" for="form-phone">Контактный телефон<sup>*</sup>:</label>
+                  <input class="form-block__input form-block__input--tel" type="tel" name="your-phone" id="form-phone" pattern="[7-8]{1}[0-9]{10}" placeholder="Введите телефон" required>
+                </div>
+                <div class="form-block__wrapper form-block__wrapper--column">
+                  <label class="form-block__label form-block__label--contacts form-block__label--padding" for="form-email">Электронная почта<sup>*</sup>:</label>
+                  <input class="form-block__input" type="email" name="your-email" id="form-email" placeholder="Введите e-mail" required>
+                </div>
+              </div>
+            </div>
+            <div class="form__block form-block form-block--impression">
+              <legend class="form-block__legend">Ваше общее впечатление:</legend>
+              <ul class="form-block__list form-list">
+                <li class="form-list__item">
+                  <input class="form-list__radio visually-hidden" type="radio" name="your-impression" id="impression-positive" value="positive" checked>
+                  <label class="form-list__label form-list__label--radio" for="impression-positive">Скорее положительное</label>
+                </li>
+                <li class="form-list__item">
+                  <input class="form-list__radio visually-hidden" type="radio" name="your-impression" id="impression-negative" value="negative">
+                  <label class="form-list__label form-list__label--radio" for="impression-negative">Скорее отрицательное</label>
+                </li>
+                <li class="form-list__item">
+                  <input class="form-list__radio visually-hidden" type="radio" name="your-impression" id="impression-nodecide" value="nodecide">
+                  <label class="form-list__label form-list__label--radio" for="impression-nodecide">Затрудняюсь ответить</label>
+                </li>
+              </ul>
+            </div>
+            <div class="form__block form-block form-block--attraction">
+              <legend class="form-block__legend form-block__legend--attraction">Посещенные достопримечательности:</legend>
+              <ul class="form-block__list form-list form-list--attraction">
+                <li class="form-list__item form-list__item--attraction">
+                  <input class="form-list__checkbox visually-hidden" type="checkbox" name="attraction-bridge" id="attractions-bridge" checked>
+                  <label class="form-list__label form-list__label--checkbox" for="attractions-bridge">Мост Дьявола</label>
+                </li>
+                <li class="form-list__item form-list__item--attraction">
+                  <input class="form-list__checkbox visually-hidden" type="checkbox" name="attraction-mountain-bell" id="attractions-mountain-bell" checked>
+                  <label class="form-list__label form-list__label--checkbox" for="attractions-mountain-bell">Гора-Колокол</label>
+                </li>
+                <li class="form-list__item form-list__item--attraction">
+                  <input class="form-list__checkbox visually-hidden" type="checkbox" name="attraction-slide-park" id="attractions-slide-park" checked>
+                  <label class="form-list__label form-list__label--checkbox" for="attractions-slide-park">Слайд-парк</label>
+                </li>
+                <li class="form-list__item form-list__item--attraction">
+                  <input class="form-list__checkbox visually-hidden" type="checkbox" name="attraction-red-rocks" id="attractions-red-rocks">
+                  <label class="form-list__label form-list__label--checkbox" for="attractions-red-rocks">Красные скалы</label>
+                </li>
+              </ul>
+            </div>
+            <div class="form__block form-block form-block--review">
+              <div class="form-block__legend">Опишите свои эмоции:</div>
+              <div class="form-block__wrapper form-block__wrapper--review">
+                <textarea class="form-block__textarea" name="your-review" id="review-comment" placeholder="Опишите подробно все свои восторги" rows="5"></textarea>
+              </div>
               <button class="form-block__button button" type="submit">Отправить отзыв</button>
             </div>
           </form>
