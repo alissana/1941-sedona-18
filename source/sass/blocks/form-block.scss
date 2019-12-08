@@ -45,6 +45,7 @@ input::placeholder {
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
+  margin: 0 auto;
   margin-bottom: 25px;
 }
 
@@ -150,6 +151,7 @@ textarea::placeholder {
 
   .form-block__legend {
     display: block;
+    margin: 0;
     margin-bottom: 60px;
 
     &--contacts {
