@@ -132,6 +132,10 @@ textarea::placeholder {
       width: 100%;
     }
 
+    &--column {
+      width: 324px;
+    }
+
     &:last-child {
       padding: 0;
     }
@@ -225,5 +229,9 @@ textarea::placeholder {
     &--padding {
       padding: 0;
     }
+  }
+
+  .form-block--column {
+    width: 400px;
   }
 }
