@@ -58,7 +58,7 @@
   height: 16px;
 }
 
-.checkbox-list__input:checked + .form-list__label--checkbox::before {
+.form-list__checkbox:checked + .form-list__label--checkbox::before {
   background-image: url("../img/icon-tick.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -81,7 +81,7 @@
   .form-list__item {
     box-sizing: border-box;
     margin: 0;
-    padding: 16px 63px 16px 75px;
+    padding: 16px 0 16px 75px;
     margin-bottom: 15px;
 
     &--attraction {

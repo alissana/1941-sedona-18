@@ -1,0 +1,14 @@
+@media (min-width: $tablet-width) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    padding: 0 120px;
+  }
+}

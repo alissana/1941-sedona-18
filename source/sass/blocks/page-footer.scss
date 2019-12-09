@@ -6,9 +6,15 @@
 
 .page-footer__tag {
   color: #000000;
+  display: block;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
+  margin-bottom: 41px;
+}
+
+.page-footer__social {
+  margin-bottom: 51px;
 }
 
 @media (min-width: $tablet-width) {
@@ -17,6 +23,14 @@
     align-items: center;
     justify-content: space-between;
     padding: 36px 60px;
+  }
+
+  .page-footer__tag {
+    margin: 0;
+  }
+
+  .page-footer__social {
+    margin: 0;
   }
 }
 
