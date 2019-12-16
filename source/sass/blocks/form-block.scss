@@ -12,6 +12,63 @@
   &--review {
     padding: 18px 0 25px 0;
   }
+
+  @media (min-width: $tablet-width) {
+    border: 0;
+    box-sizing: border-box;
+    display: flex;
+    text-align: left;
+    margin-bottom: 53px;
+    padding: 0;
+
+    &--user {
+      flex-direction: column;
+      order: 2;
+      padding-left: 57px;
+    }
+
+    &--contacts {
+      flex-direction: column;
+      order: 3;
+      text-align: center;
+      width: 100%;
+    }
+
+    &--attraction {
+      flex-direction: column;
+      margin-bottom: 38px;
+      order: 4;
+      text-align: center;
+      width: 100%;
+    }
+
+    &--impression {
+      flex-direction: column;
+      order: 1;
+    }
+
+    &--review {
+      flex-direction: column;
+      margin-bottom: 58px;
+      order: 5;
+      text-align: center;
+      width: 100%;
+    }
+
+    &--column {
+      width: 324px;
+    }
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+}
+
+.form-block__column {
+  @media (min-width: $desktop-width) {
+    width: 400px;
+  }
 }
 
 .form-block__fieldset {
@@ -19,11 +76,39 @@
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    &--contacts {
+      width: 100%;
+    }
+
+    &--attraction {
+      width: 100%;
+    }
+
+    &--review {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--contacts {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
 }
 
 .form-block__field {
   flex-grow: 1;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    &--contacts {
+      margin-bottom: 14px;
+    }
+  }
 }
 
 .form-block__input {
@@ -66,6 +151,23 @@ input::placeholder {
   &--review {
     margin-bottom: 18px;
   }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-size: 21px;
+    margin: 0;
+    margin-bottom: 55px;
+
+    &--contacts {
+      margin-bottom: 24px;
+    }
+
+    &--attraction {
+      margin: 0 auto;
+      margin-bottom: 42px;
+      width: 300px;
+    }
+  }
 }
 
 .form-block__label {
@@ -83,6 +185,18 @@ input::placeholder {
 
   &--padding {
     padding-left: 22px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--contacts {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--padding {
+      padding: 0;
+    }
   }
 }
 
@@ -104,6 +218,38 @@ input::placeholder {
 
   &--review {
     margin-bottom: 48px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--review {
+      margin-bottom: 56px;
+      width: 100%;
+    }
+
+    &--column {
+      margin-bottom: 25px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--column {
+      display: flex;
+      flex-direction: row;
+      width: 400px;
+
+      :nth-child(2) {
+        width: 480px;
+      }
+    }
+  }
+}
+
+.form-block__column-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
@@ -130,154 +276,38 @@ input::placeholder {
     border: solid 4px #e5e5e5;
     padding: 8px 16px;
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 17px 21px;
+
+    &:focus {
+      padding: 17px 21px;
+    }
+  }
 }
 
 textarea::placeholder {
   color: #000000;
 }
 
-@media (min-width: $tablet-width) {
-  .form-block {
-    border: 0;
-    box-sizing: border-box;
+.form-block__button-wrapper {
+  @media (min-width: $tablet-width) {
     display: flex;
-    text-align: left;
-    margin-bottom: 58px;
-    padding: 0;
-
-    &--user {
-      flex-direction: column;
-      order: 2;
-    }
-
-    &--contacts {
-      flex-direction: column;
-      order: 3;
-      text-align: center;
-      width: 100%;
-    }
-
-    &--attraction {
-      flex-direction: column;
-      order: 4;
-      text-align: center;
-      width: 100%;
-    }
-
-    &--impression {
-      flex-direction: column;
-      order: 1;
-    }
-
-    &--review {
-      flex-direction: column;
-      order: 5;
-      text-align: center;
-      width: 100%;
-    }
-
-    &--column {
-      width: 324px;
-    }
-
-    &:last-child {
-      padding: 0;
-    }
-  }
-
-  .form-block__button {
-    align-self: flex-start;
-    order: 3;
-    padding: 17px 0;
-    width: 100%;
-  }
-
-  .form-block__wrapper {
-    &--review {
-      margin-bottom: 58px;
-      width: 100%;
-    }
-  }
-
-  .form-block__legend {
-    display: block;
-    margin: 0;
-    margin-bottom: 60px;
-
-    &--contacts {
-      margin-bottom: 32px;
-    }
-
-    &--attraction {
-      margin: 0 auto;
-      margin-bottom: 32px;
-      width: 300px;
-    }
-  }
-
-  .form-block__label {
-    &--contacts {
-      display: block;
-      margin-bottom: 14px;
-    }
-  }
-
-  .form-block__field {
-    &--contacts {
-      margin-bottom: 14px;
-    }
-  }
-
-  .form-block__fieldset {
-    &--contacts {
-      width: 100%;
-    }
-
-    &--attraction {
-      width: 100%;
-    }
-
-    &--review {
-      width: 100%;
-    }
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .form-block__column-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
+.form-block__note {
+  color: #000000;
+  font-size: 14px;
+}
 
-  .form-block__wrapper {
-    &--column {
-      display: flex;
-      flex-direction: row;
-      width: 400px;
-
-      :nth-child(2) {
-        width: 480px;
-      }
-    }
-  }
-
-  .form-block__fieldset {
-    &--contacts {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-    }
-  }
-
-  .form-block__label {
-    &--padding {
-      padding: 0;
-    }
-  }
-
-  .form-block--column {
-    width: 400px;
+.form-block__button {
+  @media (min-width: $tablet-width) {
+    align-self: flex-start;
+    padding: 17px 0;
+    width: 324px;
   }
 }

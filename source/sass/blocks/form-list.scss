@@ -2,6 +2,24 @@
   @include no-list;
   box-sizing: border-box;
   text-align: left;
+
+  @media (min-width: $tablet-width) {
+    &--attraction {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 0 95px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--attraction {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      padding: 0;
+    }
+  }
 }
 
 .form-list__item {
@@ -13,6 +31,29 @@
 
   &--attraction {
     padding: 12px 0 42px 80px;
+  }
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 16px 0 22px 75px;
+    margin-bottom: 15px;
+
+    &--attraction {
+      padding: 14px 0 33px 80px;
+      width: 202px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--attraction {
+      padding: 14px 65px 14px 80px;
+      width: 240px;
+    }
+
+    &--attraction:last-child {
+      padding: 14px 0 14px 80px;
+    }
   }
 }
 
@@ -36,6 +77,10 @@
     position: absolute;
     left: -78px;
     top: -15px;
+
+    @media (min-width: $tablet-width) {
+      left: -72px;
+    }
   }
 
   &--checkbox::before {
@@ -68,6 +113,10 @@
   top: -15px;
   width: 51px;
   height: 51px;
+
+  @media (min-width: $tablet-width) {
+    left: -72px;
+  }
 }
 
 .form-list__checkbox:checked + .form-list__label--checkbox::before {
@@ -86,50 +135,5 @@
   &:active {
     background-color: #d5d5d5;
     opacity: 0.3;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .form-list {
-    &--attraction {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 0 auto;
-      padding: 0 95px;
-    }
-  }
-
-  .form-list__item {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 16px 0 16px 75px;
-    margin-bottom: 15px;
-
-    &--attraction {
-      padding: 14px 0 14px 80px;
-      width: 205px;
-    }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .form-list {
-    &--attraction {
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      padding: 0;
-    }
-  }
-
-  .form-list__item {
-    &--attraction {
-      padding: 14px 65px 14px 80px;
-      width: 240px;
-    }
-
-    &--attraction:last-child {
-      padding: 14px 0 14px 80px;
-    }
   }
 }
