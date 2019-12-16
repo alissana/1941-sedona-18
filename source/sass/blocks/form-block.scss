@@ -300,8 +300,13 @@ textarea::placeholder {
 }
 
 .form-block__note {
-  color: #000000;
-  font-size: 14px;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    color: #000000;
+    display: block;
+    font-size: 14px;
+  }
 }
 
 .form-block__button {
