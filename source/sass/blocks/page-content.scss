@@ -1,7 +1,16 @@
 .page-content__wrapper {
   margin: 0 auto;
-  padding: 43px 33px 29px 32px;
+  padding-top: 40px;
+  padding-bottom: 5px;
+  position: relative;
   text-align: center;
+  width: 255px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 51px;
+    padding-bottom: 50px;
+    width: 490px;
+  }
 }
 
 .page-content__title {
@@ -9,7 +18,12 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
-  margin-bottom: 20px;
+  margin: 0;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .page-content__description {
@@ -18,23 +32,4 @@
   font-weight: normal;
   line-height: 26px;
   margin: 0;
-}
-
-@media (min-width: $tablet-width) {
-  .page-content__wrapper {
-    padding: 51px 139px 55px 139px;
-  }
-
-  .page-content__title {
-    font-size: 21px;
-    line-height: 26px;
-    margin: 0;
-    margin-bottom: 28px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .page-content__wrapper {
-    padding: 51px 355px 50px 355px;
-  }
 }

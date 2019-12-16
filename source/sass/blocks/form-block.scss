@@ -1,12 +1,16 @@
 .form-block {
   border-top: 1px solid #e5e5e5;
   margin: 0 auto;
-  padding: 25px 22px 22px 22px;
+  padding: 20px 0 25px 0;
   text-align: center;
+  width: 280px;
 
-  &:last-child {
-    border-top: 0;
-    padding-top: 25px;
+  &--attraction {
+    padding: 18px 0 25px 0;
+  }
+
+  &--review {
+    padding: 18px 0 25px 0;
   }
 }
 
@@ -31,9 +35,20 @@
   font-weight: bold;
   height: 58px;
   line-height: 26px;
+  outline: none;
   padding: 22px;
   position: relative;
   width: 100%;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    background-color: #ffffff;
+    border: solid 4px #e5e5e5;
+    padding: 18px;
+  }
 }
 
 input::placeholder {
@@ -46,7 +61,11 @@ input::placeholder {
   font-weight: bold;
   line-height: 26px;
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+
+  &--review {
+    margin-bottom: 18px;
+  }
 }
 
 .form-block__label {
@@ -58,6 +77,10 @@ input::placeholder {
   margin-right: 14px;
   text-align: left;
 
+  &--contacts {
+    margin-bottom: 5px;
+  }
+
   &--padding {
     padding-left: 22px;
   }
@@ -67,11 +90,20 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 
   &--column {
     flex-direction: column;
     align-items: stretch;
+    margin-bottom: 15px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--review {
+    margin-bottom: 48px;
   }
 }
 
@@ -83,9 +115,21 @@ input::placeholder {
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
-  padding: 22px;
+  min-height: 160px;
+  outline: none;
+  padding: 12px 20px;
   resize: none;
   width: 100%;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    background-color: #ffffff;
+    border: solid 4px #e5e5e5;
+    padding: 8px 16px;
+  }
 }
 
 textarea::placeholder {
@@ -144,6 +188,8 @@ textarea::placeholder {
   .form-block__button {
     align-self: flex-start;
     order: 3;
+    padding: 17px 0;
+    width: 100%;
   }
 
   .form-block__wrapper {
