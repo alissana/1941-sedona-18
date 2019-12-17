@@ -43,10 +43,10 @@
     background-color: #f2f2f2;
     margin-top: 0;
     padding: 15px 30px 15px 20px;
-  }
 
-  &--big-size {
-    padding: 15px 20px;
+    &--big-size {
+      padding: 15px 20px;
+    }
   }
 
   @media (min-width: $desktop-width) {

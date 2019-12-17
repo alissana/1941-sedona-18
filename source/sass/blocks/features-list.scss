@@ -35,6 +35,10 @@
     padding-top: 80px;
     text-align: center;
     width: 256px;
+
+    &:nth-child(2) {
+      order: 2;
+    }
   }
 
   @media (min-width: $desktop-width) {
