@@ -1,6 +1,42 @@
 .advantages-item {
   position: relative;
   text-align: center;
+
+  &:first-child::before {
+    content: "";
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 37px;
+    position: absolute;
+    right: 50%;
+    top: 0;
+    transform: translate(50%, 0);
+    min-width: 320px;
+  }
+
+  &--grey {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:first-child::before {
+      display: none;
+    }
+
+    &--grey {
+      padding: 0;
+      padding-top: 46px;
+      padding-bottom: 46px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--grey {
+      padding-top: 0;
+      padding-bottom: 28px;
+    }
+  }
 }
 
 .advantages-item__wrapper {
@@ -8,25 +44,82 @@
 
   &--grey {
     background-color: #eeeeee;
+    border-bottom: 1px solid #d6d6d6;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+
+    &--grey {
+      border-bottom: none;
+      width: 256px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--grey {
+      width: 400px;
+    }
   }
 }
-/**
-.advantages-item__wrapper:first-child::before {
-  content: "";
-  background-image: url("../img/bg-triangle.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  position: absolute;
-  height: 37px;
-  width: 320px;
-  top: 0;
-  right: 0;
-}
-**/
 
 .advantages-item__wrapper-content {
-  margin: auto;
-  padding: 61px 27px 33px 28px;
+  margin: 0 auto;
+  padding-top: 78px;
+  padding-bottom: 25px;
+  width: 265px;
+
+  &--right {
+    padding-top: 40px;
+    padding-bottom: 23px;
+    width: 259px;
+  }
+
+  &--grey {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    width: 250px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 46px;
+    padding-bottom: 30px;
+    width: 256px;
+
+    &--right {
+      order: 2;
+    }
+
+    &--grey {
+      padding: 0;
+      width: 158px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 53px 67px 38px;
+    width: 400px;
+
+    &--grey {
+      padding: 46px 57px 38px;
+    }
+  }
+}
+
+.advantages-item__content {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    width: 162px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    width: 265px;
+
+    &--right {
+      width: 220px;
+    }
+  }
 }
 
 .advantages-item__title {
@@ -35,9 +128,41 @@
   font-weight: bold;
   line-height: 26px;
   margin: 0 auto;
+  margin-bottom: 5px;
 
   &--black {
     color: #000000;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    margin-bottom: 9px;
+
+    &--black {
+      margin-bottom: 9px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 157px;
+  }
+}
+
+.advantages-item__count {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+
+  &--grey {
+    color: #333333;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
   }
 }
 
@@ -50,56 +175,25 @@
   &--grey {
     color: #333333;
   }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
 }
 
+.photo-city {
+  margin: 0 auto;
 
-@media (min-width: $tablet-width) {
-  .advantages-item__wrapper {
-    display: flex;
-
-    &--grey {
-      box-sizing: border-box;
-      width: 256px;
-    }
-  }
-
-  .advantages-item__title {
-    box-sizing: border-box;
-    font-size: 21px;
-    width: 150px;
-  }
-
-  .advantages-item__wrapper-content {
-    box-sizing: border-box;
-    width: 256px;
-    padding: 40px;
-
-    &--right {
-      order: 2;
-    }
-  }
-
-  .photo-city {
+  @media (min-width: $tablet-width) {
     margin: 0 auto;
     object-fit: cover;
     width: 512px;
     height: 256px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .advantages-item__wrapper {
-    &--grey {
-      width: 400px;
-    }
-  }
-
-  .advantages-item__wrapper-content {
-    padding: 54px 57px;
-    width: 400px;
-  }
-
-  .photo-city {
+  @media (min-width: $desktop-width) {
     object-fit: cover;
     width: 800px;
     height: 256px;

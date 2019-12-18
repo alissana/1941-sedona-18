@@ -1,52 +1,122 @@
 .features-list {
   @include no-list;
   background-color: $subject-color;
+  padding-bottom: 22px;
+  padding-top: 35px;
   text-align: left;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 68px;
+  }
 }
 
 .features-list__item {
   margin: 0;
-  padding: 40px 40px 0 70px;
+  margin-bottom: 28px;
+  padding-left: 70px;
   position: relative;
+  width: 280px;
 
   &:last-child {
-    padding-bottom: 40px;
+    margin-bottom: 0;
   }
 
-  &--house::before {
-    content: "";
-    background-image: url("../img/icon-house.svg");
-    background-repeat: no-repeat;
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    padding-left: 45px;
+    padding-top: 80px;
+    text-align: center;
+    width: 256px;
+
+    &:nth-child(2) {
+      order: 2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 57px;
+    width: 400px;
+  }
+}
+
+.features-list__wrapper-icon {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.features-list__icon {
+  background-repeat: no-repeat;
+  fill: #81b3d2;
+  position: absolute;
+
+  &--house {
     background-size: 36px 37px;
+    top: -10px;
+    left: 22px;
     width: 37px;
     height: 36px;
-    position: absolute;
-    top: 30px;
-    left: 20px;
   }
 
-  &--food::before {
-    content: "";
-    background-image: url("../img/icon-burger.svg");
-    background-repeat: no-repeat;
+  &--food {
     background-size: 40px 35px;
     width: 40px;
     height: 35px;
-    position: absolute;
-    top: 30px;
-    left: 20px;
+    top: -6px;
+    left: 19px;
   }
 
-  &--souvenirs::before {
-    content: "";
-    background-image: url("../img/icon-gift.svg");
-    background-repeat: no-repeat;
+  &--souvenirs {
     background-size: 32px 38px;
     width: 32px;
     height: 38px;
-    position: absolute;
-    top: 30px;
-    left: 20px;
+    top: -12px;
+    left: 25px;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -28%);
+
+    &--house {
+      background-size: 72px 75px;
+      width: 72px;
+      height: 75px;
+    }
+
+    &--food {
+      background-size: 77px 68px;
+      width: 77px;
+      height: 68px;
+    }
+
+    &--souvenirs {
+      background-size: 64px 75px;
+      width: 64px;
+      height: 75px;
+    }
+  }
+}
+
+.features-list__wrapper {
+  @media (min-width: $tablet-width) {
+    width: 163px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 284px;
   }
 }
 
@@ -55,6 +125,13 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
 }
 
 .features-list__description {
@@ -64,69 +141,10 @@
   line-height: 21px;
 }
 
-@media (min-width: $tablet-width) {
-  .features-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+.features-list__description br {
+  display: none;
 
-  .features-list__item {
-    box-sizing: border-box;
-    padding: 164px 46px 66px 47px;
-    text-align: center;
-    width: 256px;
-
-    &--house::before {
-      content: "";
-      background-image: url("../img/icon-house.svg");
-      background-repeat: no-repeat;
-      background-size: 75px 72px;
-      width: 75px;
-      height: 72px;
-      position: absolute;
-      top: 132px;
-      left: 50%;
-      transform: translate(-50%, -100%);
-    }
-
-    &--food::before {
-      content: "";
-      background-image: url("../img/icon-burger.svg");
-      background-repeat: no-repeat;
-      background-size: 77px 68px;
-      width: 77px;
-      height: 68px;
-      position: absolute;
-      top: 132px;
-      left: 50%;
-      transform: translate(-50%, -100%);
-    }
-
-    &--souvenirs::before {
-      content: "";
-      background-image: url("../img/icon-gift.svg");
-      background-repeat: no-repeat;
-      background-size: 64px 75px;
-      width: 64px;
-      height: 75px;
-      position: absolute;
-      top: 132px;
-      left: 50%;
-      transform: translate(-50%, -100%);
-    }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .features-list__item {
-    box-sizing: border-box;
-    padding: 164px 73px 68px 73px;
-    width: 400px;
-  }
-
-  .features-list__title {
-    font-size: 21px;
-    line-height: 26px;
+  @media (min-width: $desktop-width) {
+    display: inline;
   }
 }
