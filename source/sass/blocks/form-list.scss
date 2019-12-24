@@ -46,13 +46,20 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 18px 0 19px 80px;
+
     &--attraction {
-      padding: 14px 65px 14px 80px;
-      width: 240px;
+      padding-top: 13px;
+      width: 260px;
+    }
+
+    &--attraction:nth-child(3) {
+      width: 235px;
     }
 
     &--attraction:last-child {
       padding: 14px 0 14px 80px;
+      width: 205px;
     }
   }
 }

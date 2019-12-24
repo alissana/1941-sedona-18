@@ -2,6 +2,7 @@
   border-top: 1px solid #e5e5e5;
   margin: 0 auto;
   padding: 20px 0 25px 0;
+  position: relative;
   text-align: center;
   width: 280px;
 
@@ -24,7 +25,7 @@
     &--user {
       flex-direction: column;
       order: 2;
-      padding-left: 57px;
+      padding-left: 58px;
     }
 
     &--contacts {
@@ -47,6 +48,17 @@
       order: 1;
     }
 
+    &--impression::after {
+      content: "";
+      background-color: #dbdbdb;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1px;
+      height: 290px;
+      z-index: 4;
+    }
+
     &--review {
       flex-direction: column;
       margin-bottom: 58px;
@@ -61,6 +73,22 @@
 
     &:last-child {
       padding: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+
+    &--column {
+      width: 480px;
+    }
+
+    &--contacts {
+      margin-bottom: 33px;
+    }
+
+    &--user {
+      padding-left: 80px;
     }
   }
 }
@@ -111,11 +139,21 @@
   }
 }
 
+.form-block__wrapper-input {
+  display: flex;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 316px;
+  }
+}
+
+
 .form-block__input {
   background-color: #f2f2f2;
   border: none;
-  box-sizing: border-box;
   color: #000000;
+  flex-grow: 1;
   font-size: 18px;
   font-weight: bold;
   height: 58px;
@@ -134,10 +172,48 @@
     border: solid 4px #e5e5e5;
     padding: 18px;
   }
+
+  @media (min-width: $desktop-width) {
+    &--tel {
+      width: 258px;
+    }
+
+    &--contacts {
+      width: 258px;
+    }
+  }
 }
 
 input::placeholder {
   color: #000000;
+}
+
+.form-block__icon {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 20px;
+  min-width: 58px;
+  min-height: 58px;
+  background-color: #e6e6e6;
+  vertical-align: top;
+
+  &--tel {
+    background-image: url("../img/icon-phone.svg");
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+  }
+
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .form-block__legend {
@@ -147,6 +223,7 @@ input::placeholder {
   line-height: 26px;
   margin: 0 auto;
   margin-bottom: 20px;
+  position: relative;
 
   &--review {
     margin-bottom: 18px;
@@ -158,6 +235,48 @@ input::placeholder {
     margin: 0;
     margin-bottom: 55px;
 
+    &::before {
+      content: "";
+      background-color: #dbdbdb;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 125px;
+      height: 1px;
+      z-index: 4;
+    }
+
+    &::after {
+      content: "";
+      background-color: #dbdbdb;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 125px;
+      height: 1px;
+      z-index: 4;
+    }
+
+    &--impression {
+      &::before {
+        background-color: transparent;
+      }
+
+      &::after {
+        background-color: transparent;
+      }
+    }
+
+    &--user {
+      &::before {
+        background-color: transparent;
+      }
+
+      &::after {
+        background-color: transparent;
+      }
+    }
+
     &--contacts {
       margin-bottom: 24px;
     }
@@ -166,6 +285,32 @@ input::placeholder {
       margin: 0 auto;
       margin-bottom: 42px;
       width: 300px;
+
+      &::before {
+        left: 350px;
+      }
+
+      &::after {
+        right: 350px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 280px;
+    }
+
+    &::after {
+      width: 280px;
+    }
+
+    &--impression {
+      padding-left: 80px;
+    }
+
+    &--contacts {
+      margin-bottom: 74px;
     }
   }
 }
@@ -197,6 +342,17 @@ input::placeholder {
     &--padding {
       padding: 0;
     }
+
+    &--contacts {
+      margin-bottom: 0;
+      margin-right: 18px;
+    }
+  }
+}
+
+.form-block__label--none {
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
@@ -206,14 +362,15 @@ input::placeholder {
   justify-content: space-between;
   margin-bottom: 20px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &--column {
     flex-direction: column;
     align-items: stretch;
     margin-bottom: 15px;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
+    width: 100%;
   }
 
   &--review {
@@ -223,7 +380,6 @@ input::placeholder {
   @media (min-width: $tablet-width) {
     &--review {
       margin-bottom: 56px;
-      width: 100%;
     }
 
     &--column {
@@ -232,14 +388,17 @@ input::placeholder {
   }
 
   @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+
     &--column {
       display: flex;
       flex-direction: row;
-      width: 400px;
-
-      :nth-child(2) {
-        width: 480px;
-      }
+      align-items: center;
+      margin-bottom: 20px;
     }
   }
 }
@@ -314,5 +473,9 @@ textarea::placeholder {
     align-self: flex-start;
     padding: 17px 0;
     width: 324px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 480px;
   }
 }

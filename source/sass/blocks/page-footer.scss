@@ -45,5 +45,9 @@
 @media (min-width: $desktop-width) {
   .page-footer {
     padding: 36px 120px;
+
+    &--form {
+      padding: 50px 120px;
+    }
   }
 }
