@@ -1,7 +1,6 @@
 .form-block {
-  border-top: 1px solid #e5e5e5;
   margin: 0 auto;
-  padding: 20px 0 25px 0;
+  padding: 21px 0 25px 0;
   position: relative;
   text-align: center;
   width: 280px;
@@ -14,6 +13,16 @@
     padding: 18px 0 25px 0;
   }
 
+  &::before {
+    content: "";
+    background-color: #dbdbdb;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 320px;
+    height: 1px;
+  }
+
   @media (min-width: $tablet-width) {
     border: 0;
     box-sizing: border-box;
@@ -21,6 +30,10 @@
     text-align: left;
     margin-bottom: 53px;
     padding: 0;
+
+    &::before {
+      background-color: transparent;
+    }
 
     &--user {
       flex-direction: column;
@@ -422,7 +435,7 @@ input::placeholder {
   line-height: 26px;
   min-height: 160px;
   outline: none;
-  padding: 12px 20px;
+  padding: 14px 20px;
   resize: none;
   width: 100%;
 
@@ -433,7 +446,7 @@ input::placeholder {
   &:focus {
     background-color: #ffffff;
     border: solid 4px #e5e5e5;
-    padding: 8px 16px;
+    padding: 10px 16px;
   }
 
   @media (min-width: $tablet-width) {

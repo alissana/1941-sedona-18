@@ -1,41 +1,46 @@
 function documentReady() {
-    var link = document.querySelector(".form-block__button");
-    var popup = document.querySelector(".error-popup");
-    var close = popup.querySelector(".popup__button");
+    var error = document.querySelector(".error-popup");
+    var success = document.querySelector(".success-popup");
+    var close_error = error.querySelector(".popup__button");
+    var close_success = success.querySelector(".popup__button");
     var form = document.querySelector(".form");
     var name = form.querySelector("[name=your-name]");
     var surname = form.querySelector("[name=your-surname]");
     var phone = form.querySelector("[name=your-phone]");
     var email = form.querySelector("[name=your-email]");
 
-    link.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      popup.classList.add("error-popup-show");
-    });
-
-    close.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      popup.classList.remove("error-popup-show");
-    });
-
     form.addEventListener("submit", function(evt) {
       if (!name.value || !surname.value || !phone.value || !email.value) {
         evt.preventDefault();
-        popup.classList.remove("error-popup-show");
-        popup.offsetWidth = popup.offsetWidth;
-        popup.classList.add("error-popup-show");
-      } else {
-          popup.classList.remove("error-popup-show");
-          popup.classList.add("success-popup-show");
-        }
+        error.classList.add("error-popup-show");
+
+        if (close_error.addEventListener("click", function(evt) {
+          evt.preventDefault();
+          error.classList.remove("error-popup-show");
+        }));
+      }
+
+      else {
+        evt.preventDefault();
+        error.classList.remove("error-popup-show");
+        success.classList.add("success-popup-show");
+
+        if (close_success.addEventListener("click", function(evt) {
+          evt.preventDefault();
+          success.classList.remove("success-popup-show");
+        }));
+      }
     });
 
     window.addEventListener("keydown", function(evt) {
       if (evt.keyCode === 27) {
-        if (popup.classList.contains("error-popup-show")) {
+        if (error.classList.contains("error-popup-show")) {
           evt.preventDefault();
-          popup.classList.remove("error-popup-show");
-          popup.classList.remove("success-popup-show");
+          error.classList.remove("error-popup-show");
+        }
+        if (success.classList.contains("success-popup-show")) {
+          evt.preventDefault();
+          success.classList.remove("success-popup-show");
         }
       }
     });
