@@ -1,6 +1,7 @@
 .main-nav {
   margin: 0 auto;
   position: relative;
+  width: 100%;
 
   &--closed .main-nav__toggle::before {
     background-image: url("../img/icon-menu.svg");

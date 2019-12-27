@@ -1,0 +1,242 @@
+.promo-video {
+  margin-bottom: 45px;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: #dbdbdb;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 1px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+
+    &::before {
+      background-color: transparent;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 85px;
+  }
+}
+
+.presentation__wrapper {
+  margin: 0 auto;
+  padding: 21px 0;
+  text-align: center;
+  width: 236px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 46px;
+    padding-bottom: 56px;
+    width: 415px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+}
+
+.presentation__title {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.presentation__description {
+  color: #333333;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.presentation__video-wrapper {
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 648px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+  }
+}
+
+.presentation__video {
+  background-image: url("../img/video-mobile@1x.jpg");
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 320px;
+  height: 200px;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/video-tablet@1x.jpg");
+    width: 648px;
+    height: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/video-desktop@1x.jpg");
+    width: 800px;
+  }
+}
+
+.presentation__controls {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: -45px;
+  background-color: #f2f2f2;
+  padding: 0 24px 23px;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    flex-wrap: nowrap;
+    position: relative;
+    margin-top: -93px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0;
+    padding-left: 35px;
+    padding-right: 41px;
+    width: 648px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+  }
+}
+
+.presentation__timeline-wrapper {
+  order: -1;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 0 -24px 23px;
+  padding: 0 25px;
+  position: relative;
+  width: 280px;
+  height: 45px;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 648px;
+    height: 93px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+    height: 93px;
+  }
+}
+
+.presentation__timeline-point {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-left: 32px;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 112px;
+  }
+}
+
+.presentation__timeline-progress {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: #ffffff;
+  display: block;
+  opacity: 0.2;
+  margin: auto 0;
+  width: 235px;
+  height: 3px;
+
+  @media (min-width: $tablet-width) {
+    width: 389px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 540px;
+  }
+}
+
+.presentation__button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  fill: #5c6870;
+  margin: 0;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: rgba(51, 51, 51, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+    margin-bottom: auto;
+    fill: #ffffff;
+
+    &:hover,
+    &:focus {
+      fill: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      fill: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &--replay {
+    margin-right: 131px;
+    width: 18px;
+    height: 21px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 42px;
+    }
+  }
+
+  &--subtitles {
+    width: 32px;
+    height: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 31px;
+    }
+  }
+
+  &--fullscreen {
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+  }
+}

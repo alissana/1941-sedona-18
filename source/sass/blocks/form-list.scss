@@ -46,13 +46,20 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 18px 0 19px 80px;
+
     &--attraction {
-      padding: 14px 65px 14px 80px;
-      width: 240px;
+      padding-top: 13px;
+      width: 260px;
+    }
+
+    &--attraction:nth-child(3) {
+      width: 235px;
     }
 
     &--attraction:last-child {
       padding: 14px 0 14px 80px;
+      width: 205px;
     }
   }
 }
@@ -92,15 +99,15 @@
     top: -15px;
     width: 56px;
     height: 56px;
+  }
 
-    &:hover,
-    &:focus {
-      background-color: #e5e5e5;
-    }
+  &:hover::before,
+  &:focus::before {
+    background-color: #e5e5e5;
+  }
 
-    &:active {
-      background-color: #d5d5d5;
-    }
+  &:active::before {
+    background-color: #d5d5d5;
   }
 }
 
@@ -113,6 +120,16 @@
   top: -15px;
   width: 51px;
   height: 51px;
+
+  &:hover,
+  &:focus {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: #d5d5d5;
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     left: -72px;

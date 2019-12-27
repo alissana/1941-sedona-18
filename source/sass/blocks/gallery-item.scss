@@ -1,17 +1,30 @@
 .gallery-item {
-  border-top: 1px solid #e5e5e5;
   font-size: 14px;
   line-height: 24px;
   margin: 0 auto;
-  padding: 23px 0 14px 0;
+  padding: 24px 0 14px 0;
   position: relative;
   text-align: left;
   width: 280px;
+
+  &::before {
+    content: "";
+    background-color: #dbdbdb;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 320px;
+    height: 1px;
+  }
 
   @media (min-width: $tablet-width) {
     margin: 0;
     padding: 0;
     width: 324px;
+
+    &::before {
+      background-color: transparent;
+    }
 
     &--big-size {
       width: 100%;
@@ -42,10 +55,10 @@
     flex-wrap: wrap;
     background-color: #f2f2f2;
     margin-top: 0;
-    padding: 15px 30px 15px 20px;
+    padding: 16px 30px 15px 20px;
 
     &--big-size {
-      padding: 15px 20px;
+      padding: 16px 20px;
     }
   }
 
@@ -59,44 +72,45 @@
   }
 }
 
+.gallery-item__caption-wrapper {
+  margin-bottom: 6px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
 .gallery-item__photographer {
   display: block;
   font-weight: normal;
   text-transform: none;
 }
 
+.gallery-item__like-wrapper {
+  fill: rgba(0, 0, 0, 0.3);
+
+  @media (min-width: $desktop-width) {
+    fill: #ffffff;
+  }
+}
+
 .gallery-item__like {
-  display: block;
   font-weight: bold;
   margin-top: 10px;
-  margin-left: 37px;
+  margin-left: 10px;
   position: relative;
-
-  &::before {
-    content: "";
-    background-image: url("../img/icon-like.svg");
-    background-repeat: no-repeat;
-    background-size: 22px 22px;
-    position: absolute;
-    left: -36px;
-    top: -3px;
-    width: 22px;
-    height: 22px;
-  }
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
+    margin-left: 5px;
+  }
 
-    &::before {
-      content: "";
-      background-image: url("../img/icon-like.svg");
-      background-repeat: no-repeat;
-      background-size: 22px 22px;
-      position: absolute;
-      left: -32px;
-      top: 0;
-      width: 22px;
-      height: 22px;
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-left: 5px;
+
+    &--margin {
+      margin-right: 8px;
     }
   }
 }
