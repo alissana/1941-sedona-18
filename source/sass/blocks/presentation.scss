@@ -1,5 +1,5 @@
 .promo-video {
-  margin-bottom: 47px;
+  margin-bottom: 45px;
   position: relative;
 
   &::before {
@@ -33,7 +33,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 46px;
-    padding-bottom: 58px;
+    padding-bottom: 56px;
     width: 415px;
   }
 
@@ -63,33 +63,46 @@
   line-height: 24px;
 }
 
-.presentation__video-jpg {
-  margin: 0;
-  max-width: 800px;
+.presentation__video-wrapper {
+  margin: 0 auto;
   padding: 0;
-  width: 100%;
 
   @media (min-width: $tablet-width) {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 0 60px;
-    display: block;
+    width: 648px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0;
     width: 800px;
   }
 }
 
-.presentation__controls-wrapper {
+.presentation__video {
+  background-image: url("../img/video-mobile@1x.jpg");
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 320px;
+  height: 200px;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/video-tablet@1x.jpg");
+    width: 648px;
+    height: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/video-desktop@1x.jpg");
+    width: 800px;
+  }
+}
+
+.presentation__controls {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  margin-top: -48px;
+  margin-top: -45px;
   background-color: #f2f2f2;
-  padding: 0 25px 20px;
+  padding: 0 24px 23px;
   width: 280px;
 
   @media (min-width: $tablet-width) {
@@ -98,8 +111,8 @@
     margin-top: -93px;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 0;
-    padding-left: 34px;
-    padding-right: 43px;
+    padding-left: 35px;
+    padding-right: 41px;
     width: 648px;
   }
 
@@ -111,7 +124,7 @@
 .presentation__timeline-wrapper {
   order: -1;
   background-color: rgba(0, 0, 0, 0.6);
-  margin: 0 -25px 25px;
+  margin: 0 -24px 23px;
   padding: 0 25px;
   position: relative;
   width: 280px;
@@ -146,7 +159,7 @@
   vertical-align: middle;
 
   @media (min-width: $tablet-width) {
-    margin-left: 114px;
+    margin-left: 112px;
   }
 }
 
