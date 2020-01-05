@@ -1,11 +1,26 @@
 .main-banner {
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   height: 389px;
   position: relative;
   min-width: 320px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+
+    &--photo {
+      background-position: -225px -230px;
+      background-size: auto 389px;
+    }
+
+    &--form {
+      background-position: -225px -230px;
+      background-size: auto 389px;
+    }
+  }
 
   ::before {
     content: "";
@@ -33,6 +48,12 @@
     width: 768px;
     height: 518px;
 
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
     ::before {
       content: "";
       background-image: url("../img/bg-intro-triangle-tablet.svg");
@@ -55,6 +76,10 @@
     background-image: url("../img/bg-back-desktop@1x.jpg");
     height: 518px;
     width: 1200px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
 
     ::before {
       content: "";
