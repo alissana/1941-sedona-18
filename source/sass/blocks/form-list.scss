@@ -113,14 +113,14 @@
 
 .form-list__radio:checked + .form-list__label--radio {
   &::before {
-  background-color: #333333;
-  border-radius: 50%;
-  border: 15px solid #f2f2f2;
-  position: absolute;
-  left: -78px;
-  top: -15px;
-  width: 51px;
-  height: 51px;
+    background-color: #333333;
+    border-radius: 50%;
+    border: 15px solid #f2f2f2;
+    position: absolute;
+    left: -78px;
+    top: -15px;
+    width: 51px;
+    height: 51px;
   }
 
   &:hover::before,
@@ -130,7 +130,7 @@
 
   &:active::before {
     border-color: #d5d5d5;
-    background-color: rgba(51, 51, 51, 0.3)
+    background-color: rgba(51, 51, 51, 0.3);
   }
 
   @media (min-width: $tablet-width) {
@@ -142,12 +142,12 @@
 
 .form-list__checkbox:checked + .form-list__label--checkbox {
   &::before {
-  background-image: url("../img/icon-tick.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 24px 16px;
-  height: 56px;
-  width: 56px;
+    background-image: url("../img/icon-tick.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 24px 16px;
+    height: 56px;
+    width: 56px;
   }
 
   &:active::before {

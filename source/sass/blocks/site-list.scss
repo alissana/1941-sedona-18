@@ -11,8 +11,8 @@
   @media (max-width: $mobile-width-only) {
     &::before {
       content: "";
-      background: rgb(0,0,0);
-      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(107,107,112,0.9990371148459384) 100%);
+      background: rgb(0, 0, 0),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(107, 107, 112, 0.9990371148459384) 100%);
       position: absolute;
       bottom: 0;
       left: 0;
