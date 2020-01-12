@@ -26,8 +26,8 @@
             </li>
             <li class="site-list__item site-list__item--none">
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__item--logo site-list__link--active">Форма отзыва</a>
+            <li class="site-list__item site-list__item--logo">
+              <a class="site-list__link site-list__link--active">Форма отзыва</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="#">HTML Academy</a>
@@ -59,7 +59,7 @@
 
           <form class="review-content__form form" action="http://echo.htmlacademy.ru" method="post">
             <div class="form__block form-block form-block--column form-block--user">
-              <legend class="form-block__legend form-block__legend--user">Представьтесь:</legend>
+              <div class="form-block__legend form-block__legend--user">Представьтесь:</div>
               <div class="form-block__wrapper">
                 <label class="form-block__label" for="form-name">Имя<sup>*</sup>:</label>
                 <input class="form-block__input" type="text" name="your-name" id="form-name" placeholder="Петр" required>
@@ -74,10 +74,10 @@
               </div>
             </div>
             <div class="form__block form-block form-block--contacts">
-              <legend class="form-block__legend form-block__legend--contacts">Контактная информация:</legend>
+              <div class="form-block__legend form-block__legend--contacts">Контактная информация:</div>
               <div class="form-block__column-wrapper">
                 <div class="form-block__wrapper form-block__wrapper--column">
-                  <label class="form-block__label form-block__label--contacts form-block__label--padding" for="form-phone"><span class="form-block__label--none">Контактный</span> телефон<sup>*</sup>:</label>
+                  <label class="form-block__label form-block__label--contacts form-block__label--padding" for="form-phone"><span class="form-block__label form-block__label--none">Контактный</span> телефон<sup>*</sup>:</label>
                   <div class="form-block__wrapper-input form-block__wrapper-input--tel">
                     <input class="form-block__input form-block__input--tel" type="tel" name="your-phone" id="form-phone" pattern="[7-8]{1}[0-9]{10}" placeholder="Введите телефон" required>
                     <span class="form-block__icon form-block__icon--tel"></span>
@@ -93,7 +93,7 @@
               </div>
             </div>
             <div class="form__block form-block form-block--column form-block--impression">
-              <legend class="form-block__legend form-block__legend--impression">Ваше общее впечатление:</legend>
+              <div class="form-block__legend form-block__legend--impression">Ваше общее впечатление:</div>
               <ul class="form-block__list form-list">
                 <li class="form-list__item">
                   <input class="form-list__radio visually-hidden" type="radio" name="your-impression" id="impression-positive" value="positive" checked>
@@ -110,7 +110,7 @@
               </ul>
             </div>
             <div class="form__block form-block form-block--attraction">
-              <legend class="form-block__legend form-block__legend--attraction">Посещенные достопримечательности:</legend>
+              <div class="form-block__legend form-block__legend--attraction">Посещенные достопримечательности:</div>
               <ul class="form-block__list form-list form-list--attraction">
                 <li class="form-list__item form-list__item--attraction">
                   <input class="form-list__checkbox visually-hidden" type="checkbox" name="attraction-bridge" id="attractions-bridge" checked>
