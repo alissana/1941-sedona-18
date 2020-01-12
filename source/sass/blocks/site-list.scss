@@ -1,6 +1,6 @@
 .site-list {
   @include no-list;
-  background-color: $primary-color;
+  background-color: #81b3d2;
   font-size: 18px;
   font-weight: bold;
   line-height: 40px;
@@ -8,11 +8,25 @@
   position: relative;
   text-align: center;
 
+  @media (max-width: $mobile-width-only) {
+    &::before {
+      content: "";
+      background: rgb(0,0,0);
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(107,107,112,0.9990371148459384) 100%);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0.2;
+      width: 320px;
+      height: 7px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    background-color: $subject-color;
+    background-color: #ffffff;
     border: none;
     font-size: 14px;
     line-height: 26px;
@@ -48,7 +62,7 @@
     width: 153px;
 
     &--logo {
-      background-color: $subject-color;
+      background-color: #ffffff;
       order: 0;
       width: 156px;
     }
@@ -81,7 +95,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    color: $text-color;
+    color: #333333;
     text-decoration: none;
 
     &:hover,
