@@ -1,6 +1,6 @@
 .features-list {
   @include no-list;
-  background-color: $subject-color;
+  background-color: #ffffff;
   padding-bottom: 22px;
   padding-top: 35px;
   text-align: left;
@@ -64,8 +64,8 @@
     background-size: 36px 37px;
     top: -10px;
     left: 22px;
-    width: 37px;
-    height: 36px;
+    width: 36px;
+    height: 37px;
   }
 
   &--food {
@@ -116,7 +116,7 @@
 }
 
 .features-list__title {
-  color: $title-color;
+  color: #000000;
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
@@ -130,7 +130,7 @@
 }
 
 .features-list__description {
-  color: $text-color;
+  color: #333333;
   font-size: 14px;
   font-weight: normal;
   line-height: 21px;
