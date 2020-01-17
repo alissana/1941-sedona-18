@@ -1,5 +1,6 @@
 .main-banner {
   background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-color: #89b5d2;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -98,6 +99,9 @@
 }
 
 .main-banner__description {
+  align-items: center;
+  align-self: center;
+  justify-content: center;
   margin: auto;
 
   &--photo {

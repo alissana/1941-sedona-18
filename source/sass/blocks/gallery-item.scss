@@ -2,7 +2,7 @@
   font-size: 14px;
   line-height: 24px;
   margin: 0 auto;
-  padding: 24px 0 14px 0;
+  padding: 24px 0 16px;
   position: relative;
   text-align: left;
   width: 280px;
@@ -41,6 +41,29 @@
   }
 }
 
+.gallery-item__img {
+  width: 280px;
+  height: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    height: 267px;
+
+    &--big-size {
+      width: 648px;
+      height: 400px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 400px;
+
+    &--big-size {
+      width: 1200px;
+    }
+  }
+}
+
 .gallery-item__signature {
   font-weight: bold;
 }
@@ -73,7 +96,7 @@
 }
 
 .gallery-item__caption-wrapper {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;

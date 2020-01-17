@@ -7,9 +7,9 @@
   width: 255px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 51px;
+    padding-top: 50px;
     padding-bottom: 50px;
-    width: 490px;
+    width: 492px;
   }
 }
 
@@ -19,10 +19,11 @@
   font-weight: bold;
   line-height: 26px;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
+    margin-bottom: 28px;
   }
 }
 
