@@ -1,8 +1,10 @@
 .social__list {
   @include no-list;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   position: relative;
+  max-width: 500px;
 
   @media (min-width: $tablet-width) {
     margin-left: -6px;

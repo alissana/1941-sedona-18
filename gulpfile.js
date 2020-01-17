@@ -75,6 +75,7 @@ gulp.task("minify-html", function() {
   return gulp.src("build/*.html")
     .pipe(htmlmin({
       collapseWhitespace: true,
+      conservativeCollapse: true,
       removeComments: true
     }))
     .pipe(gulp.dest("build/"));

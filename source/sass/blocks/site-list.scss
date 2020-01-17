@@ -58,7 +58,10 @@
   }
 
   @media (min-width: $tablet-width) {
+    align-self: center;
     box-shadow: none;
+    height: 56px;
+    padding: 15px 0;
     width: 153px;
 
     &--logo {

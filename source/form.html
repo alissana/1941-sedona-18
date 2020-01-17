@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width">
     <title>Седона. Ваши впечатления</title>
     <link href="css/style.min.css" rel="stylesheet">
-    <link rel="preload" href="fonts/ptsans.woff2" as="font">
-    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <div style="display:none">
@@ -39,7 +39,7 @@
               <picture>
                 <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
                 <source srcset="img/logo-sedona-tablet.svg" media="(min-width: 768px)">
-                <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип Седона">
+                <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
               </picture>
             </a>
           </div>
@@ -78,7 +78,7 @@
               <div class="form-block__legend form-block__legend--contacts">Контактная информация:</div>
               <div class="form-block__column-wrapper">
                 <div class="form-block__wrapper form-block__wrapper--column">
-                  <label class="form-block__label form-block__label--contacts form-block__label--padding" for="form-phone"><span class="form-block__label form-block__label--none">Контактный</span> телефон<sup>*</sup>:</label>
+                  <label class="form-block__label form-block__label--contacts form-block__label--padding" for="form-phone"><span class="form-block__label form-block__label--none">Контактный</span>телефон<sup>*</sup>:</label>
                   <div class="form-block__wrapper-input form-block__wrapper-input--tel">
                     <input class="form-block__input form-block__input--tel" type="tel" name="your-phone" id="form-phone" pattern="[7-8]{1}[0-9]{10}" placeholder="Введите телефон" required>
                     <span class="form-block__icon form-block__icon--tel"></span>
@@ -194,6 +194,6 @@
     </div>
     <script src="js/nav.js"></script>
     <script src="js/modal.js"></script>
-    <script src="picturefill.js"></script>
+    <script src="js/picturefill.min.js"></script>
   </body>
 </html>

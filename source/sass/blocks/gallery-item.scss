@@ -41,6 +41,29 @@
   }
 }
 
+.gallery-item__img {
+  width: 280px;
+  height: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    height: 267px;
+
+    &--big-size {
+      width: 648px;
+      height: 400px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 400px;
+
+    &--big-size {
+      width: 1200px;
+    }
+  }
+}
+
 .gallery-item__signature {
   font-weight: bold;
 }
