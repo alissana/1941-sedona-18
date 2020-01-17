@@ -168,22 +168,27 @@
               <source src="#">
             </video>
             <div class="presentation__controls">
-              <button class="presentation__button presentation__button--replay">
+              <button type="button" class="presentation__button presentation__button--replay">
                 <svg width="16" height="20">
+                  <title>Посмотреть еще раз</title>
                   <use xlink:href="#icon-video-replay"></use>
                 </svg>
               </button>
               <div class="presentation__timeline-wrapper">
                 <span class="presentation__timeline-progress"></span>
-                <button class="presentation__timeline-point"></button>
+                <button type="button" class="presentation__timeline-point">
+                  <span class="visually-hidden">Прогресс</span>
+                </button>
               </div>
-              <button class="presentation__button presentation__button--subtitles">
+              <button type="button" class="presentation__button presentation__button--subtitles">
                 <svg width="32" height="20">
+                  <title>Субтитры</title>
                   <use xlink:href="#icon-video-subtitles"></use>
                 </svg>
               </button>
-              <button class="presentation__button presentation__button--fullscreen">
+              <button type="button" class="presentation__button presentation__button--fullscreen">
                 <svg width="20" height="20">
+                  <title>Полноэкранный режим</title>
                   <use xlink:href="#icon-video-fullscreen"></use>
                 </svg>
               </button>

@@ -1,6 +1,6 @@
 function documentReady() {
-    var error = document.querySelector(".error-popup");
-    var success = document.querySelector(".success-popup");
+    var error = document.querySelector(".js-error-popup");
+    var success = document.querySelector(".js-success-popup");
     var close_error = error.querySelector(".popup__button");
     var close_success = success.querySelector(".popup__button");
     var form = document.querySelector(".form");
@@ -12,35 +12,35 @@ function documentReady() {
     form.addEventListener("submit", function(evt) {
       if (!name.value || !surname.value || !phone.value || !email.value) {
         evt.preventDefault();
-        error.classList.add("error-popup-show");
+        error.classList.add("popup--visible");
 
         if (close_error.addEventListener("click", function(evt) {
           evt.preventDefault();
-          error.classList.remove("error-popup-show");
+          error.classList.remove("popup--visible");
         }));
       }
 
       else {
         evt.preventDefault();
-        error.classList.remove("error-popup-show");
-        success.classList.add("success-popup-show");
+        error.classList.remove("popup--visible");
+        success.classList.add("popup--visible");
 
         if (close_success.addEventListener("click", function(evt) {
           evt.preventDefault();
-          success.classList.remove("success-popup-show");
+          success.classList.remove("popup--visible");
         }));
       }
     });
 
     window.addEventListener("keydown", function(evt) {
       if (evt.keyCode === 27) {
-        if (error.classList.contains("error-popup-show")) {
+        if (error.classList.contains("popup--visible")) {
           evt.preventDefault();
-          error.classList.remove("error-popup-show");
+          error.classList.remove("popup--visible");
         }
-        if (success.classList.contains("success-popup-show")) {
+        if (success.classList.contains("popup--visible")) {
           evt.preventDefault();
-          success.classList.remove("success-popup-show");
+          success.classList.remove("popup--visible");
         }
       }
     });

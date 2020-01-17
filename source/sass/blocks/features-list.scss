@@ -27,7 +27,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
-    padding: 80px 45px 47px;
+    padding: 60px 45px 47px;
     text-align: center;
     width: 256px;
 
@@ -37,21 +37,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 80px 45px 68px 57px;
+    padding: 60px 45px 68px 57px;
     width: 400px;
 
     &:last-child {
       width: 400px;
     }
-  }
-}
-
-.features-list__wrapper-icon {
-  @media (min-width: $tablet-width) {
-    margin: 0 auto;
-    position: relative;
-    width: 80px;
-    height: 80px;
   }
 }
 
@@ -85,24 +76,20 @@
   }
 
   @media (min-width: $tablet-width) {
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -28%);
+    margin-bottom: 22px;
+    position: static;
 
     &--house {
-      background-size: 72px 75px;
       width: 72px;
       height: 75px;
     }
 
     &--food {
-      background-size: 77px 68px;
       width: 77px;
-      height: 68px;
+      height: 75px;
     }
 
     &--souvenirs {
-      background-size: 64px 75px;
       width: 64px;
       height: 75px;
     }

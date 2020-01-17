@@ -1,11 +1,19 @@
 .popup {
-  display: none;
   background-color: #ffffff;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+  display: none;
   padding-top: 24px;
   padding-bottom: 35px;
   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 320px;
+  z-index: 10;
+
+  &--visible {
+    display: block;
+  }
 
   @media (min-width: $tablet-width) {
     &--error {
@@ -20,24 +28,6 @@
       width: 640px;
     }
   }
-}
-
-.error-popup-show {
-  display: block;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
-
-.success-popup-show {
-  display: block;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
 }
 
 .popup__content-wrapper {
